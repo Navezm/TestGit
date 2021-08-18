@@ -1,5 +1,7 @@
 package be.digitalcity.formation;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -17,6 +19,9 @@ public class Pendu2 {
 
     // Mot à deviner
     static String motChoisi = motAleatoire(LISTE);
+
+    static List<Character> alreadyPicked = new ArrayList<>();
+
 
     // Selectionne un mot dans liste
     static String motAleatoire (String[] liste){
@@ -47,6 +52,7 @@ public class Pendu2 {
     boolean isCorrect (char x) {
         int[] index;
         boolean isInside = false;
+        alreadyPicked.add(x);
         for (int i = 0; i < motChoisi.length(); i++) {
             if(x == motChoisi.charAt(i)) {
                 motReponse[i] = x;
@@ -62,11 +68,17 @@ public class Pendu2 {
         char e = scanner.nextLine().charAt(0);
 
         if (isCorrect(e)){
+            System.out.println("Nouvelle reponse");
+            System.out.println(motReponse);
+            System.out.println("Les lettres deja entrées sont " + alreadyPicked);
+
             //...
 
         }
         else {
             System.out.println("Pas de bol");
+            System.out.println(motReponse);
+            System.out.println("Les lettres deja entrées sont " + alreadyPicked);
 
             compteurErreurs++;
         }
