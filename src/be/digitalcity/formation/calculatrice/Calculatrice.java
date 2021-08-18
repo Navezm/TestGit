@@ -37,15 +37,10 @@ public class Calculatrice {
         double total = 0;
         if (numbers.length > 1) {
             total = numbers[0];
-            for (int i = 0; i < numbers.length; i++) {
-                if (i == 0) {
-                    continue;
-                } else{
-                    total = total - numbers[i];
-                }
+            for (int i = 1; i < numbers.length; i++) {
+                total = total - numbers[i];
             }
         } else System.out.println("At least two numbers required");
         return total;
     }
 }
-
