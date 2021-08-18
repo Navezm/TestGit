@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Coucou les amis comment ca va?");
+
 
 
 	// write your code here
@@ -18,5 +18,6 @@ public class Main {
         System.out.println("chaaaaooooos");
         System.out.println("bientot j'espère");
         System.out.println("omg j'ai tellement faim je vais mourir");
+        System.out.println("Coucou les amis comment ca va?");
     }
 }
