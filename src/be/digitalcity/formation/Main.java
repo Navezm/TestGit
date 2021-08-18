@@ -1,5 +1,7 @@
 package be.digitalcity.formation;
 
+import be.digitalcity.formation.calculatrice.Calculatrice;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,5 +21,8 @@ public class Main {
         System.out.println("bientot j'espère");
         System.out.println("omg j'ai tellement faim je vais mourir");
         System.out.println("Coucou les amis comment ca va?");
+
+
+        System.out.println(Calculatrice.multiplication(5,4,0));
     }
 }
