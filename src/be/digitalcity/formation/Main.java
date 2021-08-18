@@ -23,7 +23,7 @@ public class Main {
     }
     public void parcourirMot(String motATrouver, char caractereEntrer,List lettreTrouver, int indice){
         //((String)dictionnaire().get(i)).length()
-        for (int i = 0; i < motATrouver; i++) {
+        for (int i = 0; i < motATrouver.length(); i++) {
             if(motATrouver.charAt(i)==caractereEntrer){
                 placerLettre(motATrouver.charAt(i), i);
             }
