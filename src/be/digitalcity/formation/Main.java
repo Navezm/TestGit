@@ -1,12 +1,10 @@
 package be.digitalcity.formation;
 
+import be.digitalcity.formation.calculatrice.Calculatrice;
+
 public class Main {
 
     public static void main(String[] args) {
-
-
-
-
 	// write your code here
         System.out.println("On va planter ton programme");
         System.out.println("Et on y va");
@@ -20,4 +18,5 @@ public class Main {
         System.out.println("omg j'ai tellement faim je vais mourir");
         System.out.println("Coucou les amis comment ca va?");
     }
+
 }
