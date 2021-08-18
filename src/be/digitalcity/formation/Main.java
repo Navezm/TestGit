@@ -10,6 +10,8 @@ public class Main {
         System.out.println("Koukou cé mwa");
         System.out.println("LAISSEZ MA LIGNE TRANQUILLE LAAAA");
         System.out.println("Ici c'est Greg");
+        System.out.println("Elles arrivent quand ces pizzas ??");
         System.out.println("chaaaaooooos");
+        System.out.println("bientot j'espère");
     }
 }
