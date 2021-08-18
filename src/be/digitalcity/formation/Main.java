@@ -14,6 +14,7 @@ public class Main {
         System.out.println("bientot j'espère");
         System.out.println("omg j'ai tellement faim je vais mourir");
         System.out.println("Coucou les amis comment ca va?");
+        System.out.println("Hehe");
     }
 
 
