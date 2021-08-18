@@ -7,7 +7,8 @@ public class Main {
         System.out.println("On va planter ton programme");
         System.out.println("Et on y va");
         System.out.println("dddd");
-
         System.out.println("Koukou cé mwa");
+        System.out.println("LAISSEZ MA LIGNE TRANQUILLE LAAAA");
+        System.out.println("Ici c'est Greg");
     }
 }
