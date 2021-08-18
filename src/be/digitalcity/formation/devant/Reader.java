@@ -1,9 +1,6 @@
 package be.digitalcity.formation.devant;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.ArrayList;
@@ -14,25 +11,18 @@ public class Reader {
     public static List<String> lireFichier(String path) {
         List<String> personneList = new ArrayList<>();
 
-        FileInputStream fis = null;
-        BufferedInputStream bis = null;
+        BufferedReader bf = null;
 
         try {
 
-            fis = new FileInputStream(path);
-            FileChannel fc = fis.getChannel();
-            ByteBuffer bBuff = ByteBuffer.allocate((int)fc.size());
+            bf = new BufferedReader(new FileReader(path));
 
-            fc.read(bBuff);
-            bBuff.flip();
+            bf.readLine();
 
-            byte[] resultat = bBuff.array();
+            String line;
 
-            for (int i = 0; i < resultat.length; i++) {
-                if (i == 0) {
-                    continue;
-                }
-                System.out.println((char) resultat[i]);
+            while ((line = bf.readLine()) != null) {
+                System.out.println(line);
             }
 
 
