@@ -19,4 +19,16 @@ public class Personne {
         this.email = email;
         this.gender = gender;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Personne{");
+        sb.append("id=").append(id);
+        sb.append(", first_name='").append(first_name).append('\'');
+        sb.append(", last_name='").append(last_name).append('\'');
+        sb.append(", email='").append(email).append('\'');
+        sb.append(", gender='").append(gender).append('\'');
+        sb.append("}\n");
+        return sb.toString();
+    }
 }

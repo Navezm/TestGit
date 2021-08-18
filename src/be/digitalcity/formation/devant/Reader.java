@@ -8,8 +8,8 @@ import java.util.List;
 
 public class Reader {
 
-    public static List<String> lireFichier(String path) {
-        List<String> personneList = new ArrayList<>();
+    public static List<Personne> lireFichier(String path) {
+        List<Personne> personneList = new ArrayList<>();
 
         BufferedReader bf = null;
 
@@ -22,9 +22,10 @@ public class Reader {
             String line;
 
             while ((line = bf.readLine()) != null) {
-                System.out.println(line);
+                String[] tab = line.split(",");
+                Personne personne = new Personne(Long.parseLong(tab[0]), tab[1], tab[2], tab[3], tab[4]);
+                personneList.add(personne);
             }
-
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
