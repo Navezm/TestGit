@@ -6,6 +6,7 @@ public class Main {
 
         System.out.println("Coucou les amis comment ca va?");
 
+
 	// write your code here
 
     }
