@@ -30,19 +30,19 @@ public class CalculatriceView {
 
         switch (choix) {
             case 1:{
-
+                enterNumbers();
                 Calculatrice.addition(castNumbers());
             }
             case 2:{
-
+                enterNumbers();
                 Calculatrice.substraction(castNumbers());
             }
             case 3:{
-
+                enterNumbers();
                 Calculatrice.multiplication(castNumbers());
             }
             case 4:{
-
+                enterNumbers();
                 Calculatrice.division(castNumbers());
             }
             case 5: {
@@ -75,33 +75,37 @@ public class CalculatriceView {
 
     private static void enterNumbers() {
         System.out.println("Entrez le premier nombre");
-        while(tryNewAnswer()){
+        boolean invalide = tryNewAnswer();
+        while(invalide){
             System.out.println("Entrez le premier nombre");
-            tryNewAnswer();
+            invalide = tryNewAnswer();
         }
 
         System.out.println("Entrez le nombre suivant");
-        while(tryNewAnswer()){
+        invalide = tryNewAnswer();
+        while(invalide){
             System.out.println("Entrez le nombre suivant");
-            tryNewAnswer();
+            invalide = tryNewAnswer();
         }
 
         System.out.println("Souhaitez-vous entrer un autre nombre?\n" +
                 "1) Oui\n" +
                 "2) Non");
         int answer = choisirChiffre(2);
-
         while (answer == 1) {
             System.out.println("Entrez le nombre suivant");
-            while(tryNewAnswer()){
+            invalide = tryNewAnswer();
+            while(invalide){
                 System.out.println("Entrez le nombre suivant");
-                tryNewAnswer();
+                invalide = tryNewAnswer();
+                numbers.forEach(System.out::println);
             }
 
             System.out.println("Souhaitez-vous entrer un autre nombre?\n" +
                     "1) Oui\n" +
                     "2) Non");
             answer = choisirChiffre(2);
+
         }
     }
 
